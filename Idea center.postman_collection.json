@@ -1,0 +1,272 @@
+{
+	"info": {
+		"_postman_id": "910b2e88-bba5-424c-a902-b15e04f79580",
+		"name": "Idea center",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28704722"
+	},
+	"item": [
+		{
+			"name": "support method",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "create user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\": \"Boyana\",\r\n    \"email\": \"Boyana@example.com\",\r\n    \"password\": \"123456\",\r\n    \"rePassword\": \"123456\",\r\n    \"acceptedAgreement\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://softuni-qa-loadbalancer-2137572849.eu-north-1.elb.amazonaws.com:84/api/User/Create",
+					"protocol": "http",
+					"host": [
+						"softuni-qa-loadbalancer-2137572849",
+						"eu-north-1",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"port": "84",
+					"path": [
+						"api",
+						"User",
+						"Create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Idea",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiI5MTFkYzhlYy01NTllLTQyYjAtODhhMi1jYjY4MWRjYjYxOWMiLCJpYXQiOiIwOC8wMy8yMDIzIDE2OjEyOjEzIiwiVXNlcklkIjoiZDA3MDAzNzQtOGRhMi00ODQzLTVlNjItMDhkYjkzMTMwMjM2IiwiRW1haWwiOiJCb3lhbmFAZXhhbXBsZS5jb20iLCJVc2VyTmFtZSI6IkJveWFuYSIsImV4cCI6MTY5MTEwMDczMywiaXNzIjoiSWRlYUNlbnRlcl9BcHBfU29mdFVuaSIsImF1ZCI6IklkZWFDZW50ZXJfV2ViQVBJX1NvZnRVbmkifQ.jZd-dQoY88Nwk1CYK-XrbpELUK1XOxG71WLx4R27ZtY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Qa meeting 2\",\r\n    \"description\": \"Meeting with all QA 2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://softuni-qa-loadbalancer-2137572849.eu-north-1.elb.amazonaws.com:84/api/Idea/Create",
+					"protocol": "http",
+					"host": [
+						"softuni-qa-loadbalancer-2137572849",
+						"eu-north-1",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"port": "84",
+					"path": [
+						"api",
+						"Idea",
+						"Create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "authentcation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"boyana@example.com\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://softuni-qa-loadbalancer-2137572849.eu-north-1.elb.amazonaws.com:84/api/User/Authentication",
+					"protocol": "http",
+					"host": [
+						"softuni-qa-loadbalancer-2137572849",
+						"eu-north-1",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"port": "84",
+					"path": [
+						"api",
+						"User",
+						"Authentication"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all Ideas",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiI5MTFkYzhlYy01NTllLTQyYjAtODhhMi1jYjY4MWRjYjYxOWMiLCJpYXQiOiIwOC8wMy8yMDIzIDE2OjEyOjEzIiwiVXNlcklkIjoiZDA3MDAzNzQtOGRhMi00ODQzLTVlNjItMDhkYjkzMTMwMjM2IiwiRW1haWwiOiJCb3lhbmFAZXhhbXBsZS5jb20iLCJVc2VyTmFtZSI6IkJveWFuYSIsImV4cCI6MTY5MTEwMDczMywiaXNzIjoiSWRlYUNlbnRlcl9BcHBfU29mdFVuaSIsImF1ZCI6IklkZWFDZW50ZXJfV2ViQVBJX1NvZnRVbmkifQ.jZd-dQoY88Nwk1CYK-XrbpELUK1XOxG71WLx4R27ZtY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "beare\n",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://softuni-qa-loadbalancer-2137572849.eu-north-1.elb.amazonaws.com:84/api/Idea/All",
+					"protocol": "http",
+					"host": [
+						"softuni-qa-loadbalancer-2137572849",
+						"eu-north-1",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"port": "84",
+					"path": [
+						"api",
+						"Idea",
+						"All"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update idea",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiI5MTFkYzhlYy01NTllLTQyYjAtODhhMi1jYjY4MWRjYjYxOWMiLCJpYXQiOiIwOC8wMy8yMDIzIDE2OjEyOjEzIiwiVXNlcklkIjoiZDA3MDAzNzQtOGRhMi00ODQzLTVlNjItMDhkYjkzMTMwMjM2IiwiRW1haWwiOiJCb3lhbmFAZXhhbXBsZS5jb20iLCJVc2VyTmFtZSI6IkJveWFuYSIsImV4cCI6MTY5MTEwMDczMywiaXNzIjoiSWRlYUNlbnRlcl9BcHBfU29mdFVuaSIsImF1ZCI6IklkZWFDZW50ZXJfV2ViQVBJX1NvZnRVbmkifQ.jZd-dQoY88Nwk1CYK-XrbpELUK1XOxG71WLx4R27ZtY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"QA meething Eddited\",\r\n    \"url\": \"http://alabala.png\",\r\n    \"description\": \"edited description\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://softuni-qa-loadbalancer-2137572849.eu-north-1.elb.amazonaws.com:84/api/Idea/Edit?ideaId=3a4b2e87-6625-4be4-ef2e-08db92c27c0d",
+					"protocol": "http",
+					"host": [
+						"softuni-qa-loadbalancer-2137572849",
+						"eu-north-1",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"port": "84",
+					"path": [
+						"api",
+						"Idea",
+						"Edit"
+					],
+					"query": [
+						{
+							"key": "ideaId",
+							"value": "3a4b2e87-6625-4be4-ef2e-08db92c27c0d"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Idea",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiI5MTFkYzhlYy01NTllLTQyYjAtODhhMi1jYjY4MWRjYjYxOWMiLCJpYXQiOiIwOC8wMy8yMDIzIDE2OjEyOjEzIiwiVXNlcklkIjoiZDA3MDAzNzQtOGRhMi00ODQzLTVlNjItMDhkYjkzMTMwMjM2IiwiRW1haWwiOiJCb3lhbmFAZXhhbXBsZS5jb20iLCJVc2VyTmFtZSI6IkJveWFuYSIsImV4cCI6MTY5MTEwMDczMywiaXNzIjoiSWRlYUNlbnRlcl9BcHBfU29mdFVuaSIsImF1ZCI6IklkZWFDZW50ZXJfV2ViQVBJX1NvZnRVbmkifQ.jZd-dQoY88Nwk1CYK-XrbpELUK1XOxG71WLx4R27ZtY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"QA meething Eddited\",\r\n    \"url\": \"http://alabala.png\",\r\n    \"description\": \"edited description\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://softuni-qa-loadbalancer-2137572849.eu-north-1.elb.amazonaws.com:84/api/Idea/Edit?ideaId=3a4b2e87-6625-4be4-ef2e-08db92c27c0d",
+					"protocol": "http",
+					"host": [
+						"softuni-qa-loadbalancer-2137572849",
+						"eu-north-1",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"port": "84",
+					"path": [
+						"api",
+						"Idea",
+						"Edit"
+					],
+					"query": [
+						{
+							"key": "ideaId",
+							"value": "3a4b2e87-6625-4be4-ef2e-08db92c27c0d"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
